@@ -1,25 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sudoku
 {
     class SUDOKU
     {
-       // public int[,] _b2;
         public int[,] Array()
         {
-            //int[,] b190 = new int[9, 9;]
-            //Random r = new Random();
-            //for (int i = 0; i < 9; i++)
-            //{
-            //    for (int j = 0; j < 9; j++)
-            //    {
-            //        a89[i, j] = r.Next(1, 9);
-            //    }
-            //}
 
             int[,] ss = new int[9, 9];
             int[,] sudoko = new int[9, 9];
@@ -39,11 +25,8 @@ namespace Sudoku
             int[] b14 = new int[3];
             int[] b15 = new int[3];
             int[] b16 = new int[3];
-
-
-            Boolean g = true;
             Random ar = new Random(), aj = new Random();
-            int m = 0, a1 = 0, a2 = 0, a3 = 0, a4 = 0;
+            int a1 = 0, a2 = 0;
 
             for (int r = 0; r < 3; r++)
                 for (int p = 0; p < 3; p++)
@@ -177,7 +160,7 @@ namespace Sudoku
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    b1[i, j] = _b2[i, j];   
+                    b1[i, j] = _b2[i, j];
                 }
             }
 
@@ -185,92 +168,92 @@ namespace Sudoku
             int yu = 0, yu1 = 0;
             int[,] eski = new int[9, 9];
             Random ar = new Random();
-            
-                for (int u = 0; u < 9; u++)
+
+            for (int u = 0; u < 9; u++)
+            {
+                yu = 0;
+                do
                 {
-                    yu = 0;
-                    do
+                    a1 = ar.Next(9);
+                    if (_b2[u, a1] != 0)
                     {
-                        a1 = ar.Next(9);
-                        if (_b2[u,a1]!=0)
-                        {
-                            _b2[u, a1] =0;
-                            yu++;
-                        }
-                        //k++;
-                        //    yu1 = 0;
-                        //    a1 = ar.Next(9);
-                        //    if (eski[u, a1] != 1&&eski[u, a1] !=3)
-                        //    {
-                        //        eski1 = u;
-                        //        for (int i = 0; i < u && yu1 < _daraja; i++)
-                        //        {
-                        //            if (_b2[i, a1] == 0)
-                        //            {
-                        //                yu1++;
-                        //            }
-                        //        }
-                        //        if (yu1 < _daraja && _b2[u, a1] != 0)
-                        //        {
-                        //            _b2[u, a1] = 0;
-                        //            eski[u, a1] = 1;
-                        //            yu++;
-                        //        }
-                        //        if (yu1==3)
-                        //        {
-                        //            eski[u, a1] = 3;
-                        //        }
-                        //    }
-                        //    if (k==54)
-                        //    {
-                        //        return null;
-                        //    }
-                    } while (yu != _daraja);
-                }
-                int qk = 0;
-                //a1 = ar.Next(9);
-                for (int i = 0; i < 9; i++)
-                {
-                    for (int j = 0; j < 9; j++)
-                    {
-                        if (_b2[j, i] != 0)
-                        {
-                            yu1++;
-                        }
-
-
-                        if (yu1 > 9 - _daraja)
-                        {
-                            yu1--;
-                            _b2[j, i] = 0;
-                            // yu = _b2[j, i];
-
-                            for (int k = 0; k < 9 && qk > -1; k++)
-                            {
-                                for (int l = 0; l < 9 && qk < 9 - _daraja; l++)
-                                {
-                                    if (_b2[l, k] != 0)
-                                    {
-                                        qk++;
-                                    }
-                                }
-                                if (qk < 9 - _daraja && _b2[j, k] == 0)
-                                {
-
-                                    _b2[j, k] = b1[j, k];
-                                    qk = -1;
-                                }
-                                else
-                                {
-                                    qk = 0;
-                                }
-
-                            }
-                            qk = 0;
-                        }
+                        _b2[u, a1] = 0;
+                        yu++;
                     }
-                    yu1 = 0;
+                    //k++;
+                    //    yu1 = 0;
+                    //    a1 = ar.Next(9);
+                    //    if (eski[u, a1] != 1&&eski[u, a1] !=3)
+                    //    {
+                    //        eski1 = u;
+                    //        for (int i = 0; i < u && yu1 < _daraja; i++)
+                    //        {
+                    //            if (_b2[i, a1] == 0)
+                    //            {
+                    //                yu1++;
+                    //            }
+                    //        }
+                    //        if (yu1 < _daraja && _b2[u, a1] != 0)
+                    //        {
+                    //            _b2[u, a1] = 0;
+                    //            eski[u, a1] = 1;
+                    //            yu++;
+                    //        }
+                    //        if (yu1==3)
+                    //        {
+                    //            eski[u, a1] = 3;
+                    //        }
+                    //    }
+                    //    if (k==54)
+                    //    {
+                    //        return null;
+                    //    }
+                } while (yu != _daraja);
+            }
+            int qk = 0;
+            //a1 = ar.Next(9);
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    if (_b2[j, i] != 0)
+                    {
+                        yu1++;
+                    }
+
+
+                    if (yu1 > 9 - _daraja)
+                    {
+                        yu1--;
+                        _b2[j, i] = 0;
+                        // yu = _b2[j, i];
+
+                        for (int k = 0; k < 9 && qk > -1; k++)
+                        {
+                            for (int l = 0; l < 9 && qk < 9 - _daraja; l++)
+                            {
+                                if (_b2[l, k] != 0)
+                                {
+                                    qk++;
+                                }
+                            }
+                            if (qk < 9 - _daraja && _b2[j, k] == 0)
+                            {
+
+                                _b2[j, k] = b1[j, k];
+                                qk = -1;
+                            }
+                            else
+                            {
+                                qk = 0;
+                            }
+
+                        }
+                        qk = 0;
+                    }
                 }
+                yu1 = 0;
+            }
             return _b2;
         }
     }

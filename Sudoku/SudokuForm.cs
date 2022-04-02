@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sudoku
@@ -16,54 +10,33 @@ namespace Sudoku
         {
             InitializeComponent();
         }
-        int[,] aw = new int[9, 9];
+        int[,] SudokuArray = new int[9, 9];
         int[,] sudoku = new int[9, 9];
-        int[,] aw1=new int[9,9];
-        int hisoblagich=0,hi=0;
-        SUDOKU S = new SUDOKU();
-        
+        int[,] SudokuArray2 = new int[9, 9];
+        SUDOKU Sudoku = new SUDOKU();
+
         private void Form1_Load(object sender, EventArgs e)
         {
             dataGridView1.RowCount = 9;
             dataGridView1.ColumnCount = 9;
-            //aw = S.Array();
-            //aw1 = aw;
-            //S._b2 = aw;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             button4.Enabled = true;
             button5.Enabled = true;
-            int Daraja = 5;
-            //do
-            //{
-                hi = 0;
-                aw = S.Array();
-                for (int i = 0; i < 9; i++)
-                {
-                    for (int j = 0; j < 9; j++)
-                    {
-                        aw1[i, j] = aw[i, j];
-                        dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
-                    }
-                }
-                sudoku = S.sudoku(aw, Daraja);
+            int Level = 5;
 
-            //    for (int i = 0; i < 9; i++)
-            //    {
-            //        for (int j = 0; j < 9; j++)
-            //        {
-            //            if (sudoku[j, i] == 0)
-            //            {
-            //                hisoblagich++;
-            //            }
-            //        }
-            //        if (hisoblagich == Daraja) { hi++; }
-            //        hisoblagich = 0;
-            //    }
-            //} while (hi < 9);
-            hi = 0;
+            SudokuArray = Sudoku.Array();
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    SudokuArray2[i, j] = SudokuArray[i, j];
+                    dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                }
+            }
+            sudoku = Sudoku.sudoku(SudokuArray, Level);
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
@@ -75,7 +48,7 @@ namespace Sudoku
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    if (sudoku[i,j]!=0)
+                    if (sudoku[i, j] != 0)
                     {
                         dataGridView1.Rows[i].Cells[j].Value = sudoku[i, j];
                         dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.LightBlue;
@@ -89,34 +62,17 @@ namespace Sudoku
             button4.Enabled = true;
             button5.Enabled = true;
             int Daraja = 6;
-            //do
-            //{
-                hi = 0;
-                aw = S.Array();
-                for (int i = 0; i < 9; i++)
+            SudokuArray = Sudoku.Array();
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
                 {
-                    for (int j = 0; j < 9; j++)
-                    {
-                        aw1[i, j] = aw[i, j];
-                        dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
-                    }
+                    SudokuArray2[i, j] = SudokuArray[i, j];
+                    dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
                 }
-                sudoku = S.sudoku(aw, Daraja);
+            }
+            sudoku = Sudoku.sudoku(SudokuArray, Daraja);
 
-            //    for (int i = 0; i < 9; i++)
-            //    {
-            //        for (int j = 0; j < 9; j++)
-            //        {
-            //            if (sudoku[j, i] == 0)
-            //            {
-            //                hisoblagich++;
-            //            }
-            //        }
-            //        if (hisoblagich == Daraja) { hi++; }
-            //        hisoblagich = 0;
-            //    }
-            //} while (false||hi < 9);
-            hi = 0;
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
@@ -142,44 +98,26 @@ namespace Sudoku
             button4.Enabled = true;
             button5.Enabled = true;
             int Daraja = 7;
-            //do
-            //{
-                hi = 0;
-                aw = S.Array();
-                for (int i = 0; i < 9; i++)
+            SudokuArray = Sudoku.Array();
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
                 {
-                    for (int j = 0; j < 9; j++)
-                    {
-                        aw1[i, j] = aw[i, j];
-                        dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
-                    }
+                    SudokuArray2[i, j] = SudokuArray[i, j];
+                    dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
                 }
-                sudoku = S.sudoku(aw, Daraja);
-
-            //    for (int i = 0; i < 9; i++)
-            //    {
-            //        for (int j = 0; j < 9; j++)
-            //        {
-            //            if (sudoku[j, i] == 0)
-            //            {
-            //                hisoblagich++;
-            //            }
-            //        }
-            //        if (hisoblagich == Daraja) { hi++; }
-            //        hisoblagich = 0;
-            //    }
-            //} while (false||hi <9);
-            hi = 0;
+            }
+            sudoku = Sudoku.sudoku(SudokuArray, Daraja);
 
 
 
-                for (int i = 0; i < 9; i++)
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
                 {
-                    for (int j = 0; j < 9; j++)
-                    {
-                            dataGridView1.Rows[i].Cells[j].Value = null;
-                    }
+                    dataGridView1.Rows[i].Cells[j].Value = null;
                 }
+            }
 
             for (int i = 0; i < 9; i++)
             {
@@ -198,11 +136,11 @@ namespace Sudoku
         private void button4_Click(object sender, EventArgs e)
         {
             bool t = true;
-            for (int i = 0; i < 9&&t; i++)
+            for (int i = 0; i < 9 && t; i++)
             {
-                for (int j = 0; j < 9&&t; j++)
+                for (int j = 0; j < 9 && t; j++)
                 {
-                    if (Convert.ToInt32(dataGridView1.Rows[i].Cells[j].Value) != aw1[i, j]) { t = false; }
+                    if (Convert.ToInt32(dataGridView1.Rows[i].Cells[j].Value) != SudokuArray2[i, j]) { t = false; }
                 }
             }
             if (t)
@@ -221,7 +159,7 @@ namespace Sudoku
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    dataGridView1.Rows[i].Cells[j].Value = aw1[i, j];
+                    dataGridView1.Rows[i].Cells[j].Value = SudokuArray2[i, j];
                 }
             }
         }

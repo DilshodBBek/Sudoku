@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku", "Sudoku\Sudoku.csproj", "{7154A115-0647-407E-A487-B2CFD038E374}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SudokuSetup", "SudokuSetup\SudokuSetup.vdproj", "{3147242A-105D-4EDA-973F-E97F0023C2EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +17,13 @@ Global
 		{7154A115-0647-407E-A487-B2CFD038E374}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7154A115-0647-407E-A487-B2CFD038E374}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7154A115-0647-407E-A487-B2CFD038E374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3147242A-105D-4EDA-973F-E97F0023C2EC}.Debug|Any CPU.ActiveCfg = Debug
+		{3147242A-105D-4EDA-973F-E97F0023C2EC}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52EF2CA4-C1F9-40B7-90D9-D086BAEE7597}
 	EndGlobalSection
 EndGlobal
