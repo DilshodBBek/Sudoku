@@ -73,11 +73,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 49);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 60);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataGridView1.RowHeadersWidth = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(475, 394);
+            this.dataGridView1.Size = new System.Drawing.Size(633, 485);
             this.dataGridView1.StandardTab = true;
             this.dataGridView1.TabIndex = 0;
             // 
@@ -86,9 +87,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(198, 9);
+            this.label1.Location = new System.Drawing.Point(264, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 36);
+            this.label1.Size = new System.Drawing.Size(148, 45);
             this.label1.TabIndex = 1;
             this.label1.Text = "Sudoku";
             // 
@@ -96,9 +98,10 @@
             // 
             this.button1.BackColor = System.Drawing.Color.LightBlue;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(514, 46);
+            this.button1.Location = new System.Drawing.Point(685, 57);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 44);
+            this.button1.Size = new System.Drawing.Size(201, 54);
             this.button1.TabIndex = 2;
             this.button1.Text = "OSON";
             this.button1.UseVisualStyleBackColor = false;
@@ -108,9 +111,10 @@
             // 
             this.button2.BackColor = System.Drawing.Color.LightPink;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(514, 122);
+            this.button2.Location = new System.Drawing.Point(685, 150);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 44);
+            this.button2.Size = new System.Drawing.Size(201, 54);
             this.button2.TabIndex = 3;
             this.button2.Text = "O`RTA";
             this.button2.UseVisualStyleBackColor = false;
@@ -120,9 +124,10 @@
             // 
             this.button3.BackColor = System.Drawing.Color.LightGreen;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(514, 198);
+            this.button3.Location = new System.Drawing.Point(685, 244);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(151, 44);
+            this.button3.Size = new System.Drawing.Size(201, 54);
             this.button3.TabIndex = 4;
             this.button3.Text = "QIYIN";
             this.button3.UseVisualStyleBackColor = false;
@@ -132,9 +137,10 @@
             // 
             this.button4.Enabled = false;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(25, 449);
+            this.button4.Location = new System.Drawing.Point(33, 553);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(223, 44);
+            this.button4.Size = new System.Drawing.Size(297, 54);
             this.button4.TabIndex = 5;
             this.button4.Text = "TEKSHIRISH";
             this.button4.UseVisualStyleBackColor = true;
@@ -144,9 +150,10 @@
             // 
             this.button5.Enabled = false;
             this.button5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(264, 449);
+            this.button5.Location = new System.Drawing.Point(352, 553);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(223, 44);
+            this.button5.Size = new System.Drawing.Size(297, 54);
             this.button5.TabIndex = 6;
             this.button5.Text = "TO`LDIRISH";
             this.button5.UseVisualStyleBackColor = true;
@@ -155,18 +162,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(534, 480);
+            this.label2.Location = new System.Drawing.Point(712, 591);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 13);
+            this.label2.Size = new System.Drawing.Size(177, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Автор:Шодиев Дилшодбек";
             // 
             // My_Sudoku
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
-            this.ClientSize = new System.Drawing.Size(677, 496);
+            this.ClientSize = new System.Drawing.Size(903, 622);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -175,6 +183,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "My_Sudoku";
             this.Text = "Sudoku";
             this.Load += new System.EventHandler(this.Form1_Load);
